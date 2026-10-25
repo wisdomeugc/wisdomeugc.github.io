@@ -315,7 +315,7 @@
     fig.querySelector('.play').addEventListener('click', () => {
       fig.classList.add('started');
       video.controls = true;
-      video.play();
+      video.play().catch(() => {}); // a pause or hook switch mid-load is fine
     });
     video.addEventListener('play', () => {
       videos.forEach(v => { if (v !== video) v.pause(); });
