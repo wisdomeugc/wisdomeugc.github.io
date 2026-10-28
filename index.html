@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wisdom E | Tech UGC Creator</title>
-<meta name="description" content="Tech UGC ads by Wisdom E, filmed in Ireland. Hook-first 9:16 ads with 3 hooks delivered per ad.">
+<title>Wisdom E | Tech UGC Creator in Ireland</title>
+<meta name="description" content="Wisdom E is a tech UGC creator in Ireland. Honest, test-led vertical product videos for tech and gadget brands: concept, script, filming and edit. Custom quotes.">
 <meta name="theme-color" content="#0f100d">
 <link rel="canonical" href="https://wisdomeugc.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wisdomeugc.github.io/">
 <meta property="og:title" content="Wisdom E | Tech UGC Creator">
-<meta property="og:description" content="Tech UGC ads, filmed in Ireland. 3 hooks delivered per ad.">
-<meta property="og:image" content="https://wisdomeugc.github.io/media/og-card.jpg">
+<meta property="og:description" content="Honest, test-led product videos for tech and gadget brands, filmed in Ireland.">
+<meta property="og:image" content="https://wisdomeugc.github.io/media/og-card-v2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Wisdom E, tech UGC creator in Ireland: three vertical ad stills">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://wisdomeugc.github.io/media/og-card.jpg">
+<meta name="twitter:image" content="https://wisdomeugc.github.io/media/og-card-v2.jpg">
 <style>
   :root {
     --bg: #0f100d;
@@ -49,23 +49,43 @@
   .nav a { text-decoration: none; color: var(--muted); }
   .nav a:hover { color: var(--text); }
   .nav .btn { color: var(--bg); }
-  @media (max-width: 560px) { .nav a:not(.btn) { display: none; } .brand span { display: none; } }
+  @media (max-width: 640px) { .nav a:not(.btn) { display: none; } .brand span { display: none; } }
 
   .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 650; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; }
   .btn:hover { filter: brightness(1.06); }
   .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .btn.ghost:hover { border-color: var(--muted); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
   /* Type */
   .eyebrow { margin: 0 0 10px; font-size: 13px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
   h1, h2, h3 { letter-spacing: -.02em; line-height: 1.12; margin: 0; }
-  h1 { font-size: clamp(32px, 5vw, 52px); }
+  h1 { font-size: clamp(34px, 5vw, 54px); }
   h2 { font-size: clamp(26px, 3.4vw, 36px); }
   h3 { font-size: 20px; }
-  .lede { font-size: 19px; color: var(--muted); margin: 16px 0 0; max-width: 34em; }
+  .lede { font-size: 18px; color: var(--muted); margin: 0; max-width: 34em; }
   .meta { font-size: 14px; color: var(--muted); margin: 0; }
-  section { padding: 64px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 60px; }
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 60px; }
   .section-head { max-width: 40em; margin-bottom: 28px; }
   .section-head p { color: var(--muted); margin: 12px 0 0; }
+
+  /* Hero */
+  .hero { padding: 32px 0 36px; }
+  .hero-grid { display: grid; grid-template-columns: 84px 1fr; grid-template-areas: "photo id" "copy copy"; column-gap: 16px; row-gap: 20px; align-items: center; }
+  .portrait { grid-area: photo; display: block; width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid var(--line); }
+  .hero-id { grid-area: id; }
+  .hero h1 .role { display: block; margin-top: 6px; font-size: .5em; letter-spacing: -.01em; color: var(--accent); }
+  .hero-copy { grid-area: copy; }
+  .for { margin: 14px 0 0; font-size: 15px; color: var(--muted); max-width: 36em; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .cta-row .btn { font-size: 16px; padding: 12px 20px; }
+  @media (min-width: 760px) {
+    .hero { padding: 56px 0; }
+    .hero-grid { grid-template-columns: 184px 1fr; grid-template-areas: "photo id" "photo copy"; column-gap: 44px; row-gap: 18px; }
+    .portrait { width: 184px; height: 184px; align-self: start; }
+    .hero-id { align-self: end; }
+    .hero-copy { align-self: start; }
+  }
 
   /* Video player */
   .player { position: relative; margin: 0; aspect-ratio: 9 / 16; border-radius: var(--radius); overflow: hidden; background: #000; }
@@ -83,58 +103,64 @@
   .player .len { position: absolute; top: 12px; right: 12px; font-size: 12px; font-weight: 650; background: rgba(15,16,13,.78); padding: 4px 8px; border-radius: 6px; pointer-events: none; }
   .player.started .len { display: none; }
 
-  /* Hero */
-  .hero { padding-top: 40px; }
-  .hero .wrap { display: grid; gap: 28px; grid-template-areas: "top" "player" "bottom"; }
-  .hero-top { grid-area: top; }
-  .hero-bottom { grid-area: bottom; }
-  .hero .player { grid-area: player; width: min(100%, calc(78svh * 9 / 16), 430px); justify-self: center; }
-  .shows { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-  .shows li { padding-left: 26px; position: relative; }
-  .shows li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-  .hero .meta { margin-top: 22px; }
-  .tag { display: inline-block; font-size: 12px; font-weight: 650; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; margin-top: 18px; }
-  @media (min-width: 900px) {
-    .hero .wrap { grid-template-columns: 1fr auto; grid-template-areas: "top player" "bottom player"; column-gap: 56px; row-gap: 24px; }
-    .hero-top { align-self: end; }
-    .hero-bottom { align-self: start; }
-    .hero .player { width: min(400px, calc(80svh * 9 / 16)); }
-  }
-
-  /* Hooks */
-  .hooks-row { display: grid; grid-auto-flow: column; grid-auto-columns: min(72vw, 300px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; margin: 0 calc(var(--gutter) * -1); padding-left: var(--gutter); padding-right: var(--gutter); scroll-padding: 0 var(--gutter); }
-  .hook { scroll-snap-align: start; }
-  .hook .label { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 14px; }
-  .hook .label strong { font-size: 15px; }
-  .hook .label em { font-style: normal; font-size: 12px; color: var(--accent); }
-  .hook blockquote { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
-  @media (min-width: 900px) { .hooks-row { grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 300px)); gap: 28px; overflow: visible; margin: 0; padding: 0; } }
-
-  /* More work */
-  .work-grid { display: grid; gap: 40px; }
+  /* Work */
+  #work { padding-top: 40px; }
   .piece .player { width: min(100%, 360px); }
   .piece h3 { margin-top: 18px; }
-  .piece p { margin: 8px 0 0; color: var(--muted); max-width: 30em; }
-  .piece .meta { margin-top: 10px; }
+  .piece p { margin: 8px 0 0; color: var(--muted); max-width: 32em; }
+  .featured { display: grid; gap: 8px; }
+  .featured .player { width: min(100%, 400px, calc(78svh * 9 / 16)); }
+  .featured h3 { font-size: clamp(22px, 2.6vw, 28px); }
+  @media (min-width: 900px) {
+    .featured { grid-template-columns: auto 1fr; column-gap: 56px; align-items: start; }
+    .featured .piece-body { padding-top: 8px; }
+    .featured .piece-body h3:first-of-type { margin-top: 12px; }
+  }
+  .work-grid { display: grid; gap: 48px; margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); }
   @media (min-width: 760px) { .work-grid { grid-template-columns: 1fr 1fr; } }
-  .switch { display: flex; gap: 8px; margin-top: 14px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 650; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+  .tag.hi { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .facts { margin: 16px 0 0; display: grid; gap: 10px; max-width: 32em; }
+  .facts div { border-top: 1px solid var(--line); padding-top: 10px; }
+  .facts dt { font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .facts dd { margin: 2px 0 0; font-size: 15px; }
+  .switch { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+  .switch .switch-label { font-size: 13px; color: var(--muted); margin-right: 2px; }
   .switch button { font: 650 14px/1 inherit; font-family: inherit; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer; }
   .switch button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
-  .hook-line { margin: 10px 0 0; color: var(--muted); font-size: 15px; max-width: 30em; }
-  .about-photo { display: block; width: 152px; height: 152px; border-radius: 50%; object-fit: cover; border: 3px solid var(--line); margin-bottom: 22px; }
+  .hook-line { margin: 10px 0 0; color: var(--muted); font-size: 15px; max-width: 26em; }
+  .note { font-size: 14px; }
 
-  /* About + contact */
-  .about-grid { display: grid; gap: 32px; }
-  @media (min-width: 900px) { .about-grid { grid-template-columns: 1.2fr 1fr; gap: 56px; } }
-  .about-grid p { margin: 0 0 14px; }
+  /* Services */
+  .svc-grid { display: grid; gap: 28px; }
+  @media (min-width: 760px) { .svc-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .svc h3 { margin-bottom: 12px; }
   .offer { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-  .offer li { padding: 14px 18px; border-top: 1px solid var(--line); }
+  .offer li { padding: 13px 18px; border-top: 1px solid var(--line); }
   .offer li:first-child { border-top: 0; }
+  .offer li small { display: block; color: var(--muted); font-size: 14px; }
+  .svc-notes { margin-top: 32px; display: grid; gap: 12px; max-width: 46em; }
+  .svc-notes p { margin: 0; color: var(--muted); }
+  .svc-notes strong { color: var(--text); }
+  .svc-notes .btn { justify-self: start; margin-top: 8px; }
+
+  /* About */
+  .about-grid { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .about-grid { grid-template-columns: 1.3fr 1fr; gap: 56px; } }
+  .about-grid h2 { margin-bottom: 16px; }
+  .about-grid p { margin: 0 0 14px; max-width: 34em; }
+  .about-grid .lede { margin-bottom: 16px; }
+
+  /* Contact */
   .contact { text-align: center; border-bottom: 0; }
-  .contact .section-head { margin: 0 auto 24px; }
-  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .contact .section-head { margin: 0 auto 22px; }
+  .topics { list-style: none; margin: 0 auto 22px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 40em; }
+  .topics li { font-size: 15px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; }
   .contact .btn { font-size: 17px; padding: 14px 26px; }
   .contact-address { margin: 14px 0 0; color: var(--muted); font-size: 15px; user-select: all; }
+  .secondary { margin: 28px auto 0; color: var(--muted); font-size: 15px; max-width: 34em; }
+  .secondary.intro { margin: 0 auto 22px; }
 
   footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
   footer p { margin: 0 0 8px; max-width: 46em; }
@@ -146,78 +172,27 @@
   <div class="wrap">
     <a class="brand" href="#">Wisdom E <span>· Tech UGC</span></a>
     <nav class="nav" aria-label="Main">
-      <a href="#hooks">Hooks</a>
       <a href="#work">Work</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a class="btn" href="#contact">Contact</a>
+      <a class="btn" href="#contact">Work with me</a>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <div class="wrap">
-      <div class="hero-top">
-        <p class="eyebrow">Featured ad</p>
-        <h1>Hear the difference: DJI Mic Mini 2</h1>
-        <p class="lede">A 33-second ad built around a real test: my phone's built-in mic first, then the DJI Mic Mini 2, walking away from the camera in the Irish woods.</p>
+    <div class="wrap hero-grid">
+      <img class="portrait" src="media/wisdom-e-portrait.jpg" width="600" height="600" alt="Portrait of Wisdom E">
+      <div class="hero-id">
+        <h1>Wisdom E <span class="role">Tech UGC Creator · Ireland</span></h1>
       </div>
-      <div class="hero-bottom">
-        <ul class="shows">
-          <li>On-camera delivery, written, filmed and edited by me</li>
-          <li>An honest A/B test: one fixed level per mic, no noise reduction or EQ</li>
-          <li>Product handling and close-up B-roll</li>
-          <li>A clear CTA and a product end shot</li>
-        </ul>
-        <p class="meta">33 s · 9:16 · All audio is my own recording, no music</p>
-        <span class="tag">Spec ad, not commissioned by DJI</span>
-      </div>
-      <figure class="player" data-len="0:33">
-        <video playsinline preload="none" controlslist="nodownload" poster="media/posters/dji-mic-mini-2_hook-c.jpg" width="1080" height="1920">
-          <source src="media/dji-mic-mini-2_hook-c.mp4" type="video/mp4">
-        </video>
-        <button class="play" type="button" aria-label="Play the DJI Mic Mini 2 ad with sound"><span>Play with sound</span></button>
-      </figure>
-    </div>
-  </section>
-
-  <section id="hooks">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Hook variations</p>
-        <h2>3 hooks delivered per ad</h2>
-        <p>Same ad, three different openings. Each one is a full, ready-to-post version, so you can test which first line stops the scroll.</p>
-      </div>
-      <div class="hooks-row">
-        <div class="hook">
-          <figure class="player" data-len="0:33">
-            <video playsinline preload="none" controlslist="nodownload" poster="media/posters/dji-mic-mini-2_hook-c.jpg" width="1080" height="1920">
-              <source src="media/dji-mic-mini-2_hook-c.mp4" type="video/mp4">
-            </video>
-            <button class="play" type="button" aria-label="Play hook C"><span>Hook C</span></button>
-          </figure>
-          <div class="label"><strong>Hook C</strong><em>Featured cut</em></div>
-          <blockquote>“Same phone, same woods, just one change, listen.”</blockquote>
-        </div>
-        <div class="hook">
-          <figure class="player" data-len="0:33">
-            <video playsinline preload="none" controlslist="nodownload" poster="media/posters/dji-mic-mini-2_hook-a.jpg" width="1080" height="1920">
-              <source src="media/dji-mic-mini-2_hook-a.mp4" type="video/mp4">
-            </video>
-            <button class="play" type="button" aria-label="Play hook A"><span>Hook A</span></button>
-          </figure>
-          <div class="label"><strong>Hook A</strong></div>
-          <blockquote>“This tiny thing made my phone video sound so much better.”</blockquote>
-        </div>
-        <div class="hook">
-          <figure class="player" data-len="0:32">
-            <video playsinline preload="none" controlslist="nodownload" poster="media/posters/dji-mic-mini-2_hook-b.jpg" width="1080" height="1920">
-              <source src="media/dji-mic-mini-2_hook-b.mp4" type="video/mp4">
-            </video>
-            <button class="play" type="button" aria-label="Play hook B"><span>Hook B</span></button>
-          </figure>
-          <div class="label"><strong>Hook B</strong></div>
-          <blockquote>“Your phone videos don’t look bad, they sound bad.”</blockquote>
+      <div class="hero-copy">
+        <p class="lede">I create honest, test-led product videos for tech and gadget brands. From concept and filming to the final edit, I turn product features into content people can actually understand.</p>
+        <p class="for">For brands that make phones and accessories, mics and audio gear, chargers, desk setups and creator kit.</p>
+        <div class="cta-row">
+          <a class="btn" href="#work">View my work</a>
+          <a class="btn ghost" href="#contact">Work with me</a>
         </div>
       </div>
     </div>
@@ -226,9 +201,40 @@
   <section id="work">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">More work</p>
-        <h2>More spec ads</h2>
+        <p class="eyebrow">Portfolio</p>
+        <h2>Recent work</h2>
       </div>
+
+      <article class="piece featured">
+        <div class="piece-media">
+          <figure class="player" data-len="0:33">
+            <video playsinline preload="none" controlslist="nodownload" poster="media/posters/dji-mic-mini-2_hook-c.jpg" width="1080" height="1920">
+              <source src="media/dji-mic-mini-2_hook-c.mp4" type="video/mp4">
+            </video>
+            <button class="play" type="button" aria-label="Play the DJI Mic Mini 2 ad with sound"><span>Play with sound</span></button>
+          </figure>
+          <div class="switch" role="group" aria-label="Choose an opening hook">
+            <span class="switch-label">Openings:</span>
+            <button type="button" aria-pressed="true" data-src="media/dji-mic-mini-2_hook-c.mp4" data-poster="media/posters/dji-mic-mini-2_hook-c.jpg" data-len="0:33" data-line="“Same phone, same woods, just one change, listen.”">Hook 1</button>
+            <button type="button" aria-pressed="false" data-src="media/dji-mic-mini-2_hook-a.mp4" data-poster="media/posters/dji-mic-mini-2_hook-a.jpg" data-len="0:33" data-line="“This tiny thing made my phone video sound so much better.”">Hook 2</button>
+            <button type="button" aria-pressed="false" data-src="media/dji-mic-mini-2_hook-b.mp4" data-poster="media/posters/dji-mic-mini-2_hook-b.jpg" data-len="0:32" data-line="“Your phone videos don’t look bad, they sound bad.”">Hook 3</button>
+          </div>
+          <blockquote class="hook-line">“Same phone, same woods, just one change, listen.”</blockquote>
+        </div>
+        <div class="piece-body">
+          <div class="tags"><span class="tag hi">Featured</span><span class="tag">Self-produced spec ad</span></div>
+          <h3>DJI Mic Mini 2: hear the difference</h3>
+          <p>An ad built around a real test. I walk away from the camera in the Irish woods, first on my phone’s built-in mic, then on the DJI Mic Mini 2, so you hear the difference for yourself.</p>
+          <dl class="facts">
+            <div><dt>Deliverable</dt><dd>33-second vertical ad (9:16) with captions and a call to action</dd></div>
+            <div><dt>Format</dt><dd>On-camera A/B test, product handling and close-up B-roll</dd></div>
+            <div><dt>Audio</dt><dd>My own recording, no music. It opens on the phone mic on purpose. One fixed level per mic, no noise reduction or EQ.</dd></div>
+            <div><dt>Status</dt><dd>Spec ad, written, filmed and edited by me. Not commissioned by DJI.</dd></div>
+          </dl>
+          <p class="note">The same ad, cut with three different opening lines: switch them under the video. Extra hooks are an optional add-on.</p>
+        </div>
+      </article>
+
       <div class="work-grid">
         <article class="piece">
           <figure class="player" data-len="0:32">
@@ -237,16 +243,22 @@
             </video>
             <button class="play" type="button" aria-label="Play the vertical laptop stand ad"><span>Play</span></button>
           </figure>
-          <div class="switch" role="group" aria-label="Choose a hook">
-            <button type="button" aria-pressed="true" data-src="media/vertical-laptop-stand_hook-a.mp4" data-poster="media/posters/vertical-laptop-stand_hook-a.jpg" data-line="“My laptop was taking up desk space even when I wasn’t using the screen…”">Hook A</button>
-            <button type="button" aria-pressed="false" data-src="media/vertical-laptop-stand_hook-b.mp4" data-poster="media/posters/vertical-laptop-stand_hook-b.jpg" data-line="“It’s not a life-changing gadget, it’s just genuinely useful.”">Hook B</button>
-            <button type="button" aria-pressed="false" data-src="media/vertical-laptop-stand_hook-c.mp4" data-poster="media/posters/vertical-laptop-stand_hook-c.jpg" data-line="“If you work in clamshell mode, this is a tidy little upgrade.”">Hook C</button>
+          <div class="switch" role="group" aria-label="Choose an opening hook">
+            <span class="switch-label">Openings:</span>
+            <button type="button" aria-pressed="true" data-src="media/vertical-laptop-stand_hook-a.mp4" data-poster="media/posters/vertical-laptop-stand_hook-a.jpg" data-len="0:32" data-line="“My laptop was taking up desk space even when I wasn’t using the screen…”">Hook 1</button>
+            <button type="button" aria-pressed="false" data-src="media/vertical-laptop-stand_hook-b.mp4" data-poster="media/posters/vertical-laptop-stand_hook-b.jpg" data-len="0:32" data-line="“It’s not a life-changing gadget, it’s just genuinely useful.”">Hook 2</button>
+            <button type="button" aria-pressed="false" data-src="media/vertical-laptop-stand_hook-c.mp4" data-poster="media/posters/vertical-laptop-stand_hook-c.jpg" data-len="0:32" data-line="“If you work in clamshell mode, this is a tidy little upgrade.”">Hook 3</button>
           </div>
           <blockquote class="hook-line">“My laptop was taking up desk space even when I wasn’t using the screen…”</blockquote>
-          <h3>Vertical laptop stand: same laptop, tidier desk</h3>
-          <p>A relaxed, no-hype product demo with tracked graphics. Three openings, same ad: switch hooks above.</p>
-          <p class="meta">32 s · 9:16 · Spec ad, unbranded product</p>
+          <div class="tags"><span class="tag">Self-produced spec ad</span></div>
+          <h3>Vertical laptop stand: a tidier desk</h3>
+          <p>A relaxed, no-hype product demo. It shows the problem, then the fix, with on-screen graphics that track the product.</p>
+          <dl class="facts">
+            <div><dt>Deliverable</dt><dd>32-second vertical product demo (9:16), captions, licensed music</dd></div>
+            <div><dt>Status</dt><dd>Spec ad for an unbranded product. Not commissioned by any brand.</dd></div>
+          </dl>
         </article>
+
         <article class="piece">
           <figure class="player" data-len="0:46">
             <video playsinline preload="none" controlslist="nodownload" poster="media/posters/redmi-15c-first-impressions.jpg" width="1080" height="1920">
@@ -254,10 +266,56 @@
             </video>
             <button class="play" type="button" aria-label="Play the Redmi 15C first impressions ad"><span>Play</span></button>
           </figure>
+          <div class="tags"><span class="tag">Self-produced spec ad</span></div>
           <h3>Redmi 15C: did she get a bargain?</h3>
-          <p>Unboxing and first impressions that open on a real story: the Redmi my mom bought for €50 (a sale price, shown on screen). No music, just my own audio.</p>
-          <p class="meta">46 s · 9:16 · Spec ad, not commissioned by the brand</p>
+          <p>A story-led unboxing and first look. It opens on the Redmi my mom bought for €50 (a sale price, disclosed on screen) and asks what the extra money buys you.</p>
+          <dl class="facts">
+            <div><dt>Deliverable</dt><dd>46-second vertical unboxing (9:16), captions, no music</dd></div>
+            <div><dt>Status</dt><dd>Spec ad, cut from my own footage. Not commissioned by Xiaomi.</dd></div>
+          </dl>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2>Vertical UGC videos, made start to finish</h2>
+        <p>Each project is a professionally produced vertical video for TikTok, Instagram Reels or YouTube Shorts. You send the product, I handle the rest and deliver the finished files.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc">
+          <h3>Included</h3>
+          <ul class="offer">
+            <li>Concept and creative direction</li>
+            <li>Script or talking points<small>Or your own script, delivered as written</small></li>
+            <li>Filming and product demonstration</li>
+            <li>Editing and pacing</li>
+            <li>Captions<small>Burned in, plus a caption file</small></li>
+            <li>The final exported video, ready to post</li>
+            <li>One round of revisions</li>
+          </ul>
+        </div>
+        <div class="svc">
+          <h3>Optional add-ons</h3>
+          <ul class="offer">
+            <li>Extra opening hooks</li>
+            <li>Alternative edits and cut-downs</li>
+            <li>Extra aspect ratios<small>For example 1:1, 4:5 or 16:9</small></li>
+            <li>Raw footage</li>
+            <li>Extra revision rounds</li>
+            <li>Paid-ad usage licence</li>
+            <li>Longer usage periods</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc-notes">
+        <p><strong>Usage.</strong> You can post the video organically on your brand’s own channels. Paid-ad use is licensed separately, for a set period.</p>
+        <p><strong>What you’re buying.</strong> The video, not my audience. I don’t manage your accounts, post for you, run ads or promise posts on my own channels.</p>
+        <p><strong>Pricing.</strong> Every brief is different, so I quote per project.</p>
+        <a class="btn" href="#contact">Get a quote</a>
       </div>
     </div>
   </section>
@@ -265,19 +323,21 @@
   <section id="about">
     <div class="wrap about-grid">
       <div>
-        <img class="about-photo" src="media/wisdom-e.jpg" width="480" height="480" alt="Wisdom E" loading="lazy">
         <p class="eyebrow">About</p>
-        <h2>Hi, I’m Wisdom E</h2>
-        <p class="lede">I’m a tech UGC creator based in Ireland. I write, film and edit every ad myself, with real products and no made-up claims.</p>
+        <h2>Hi, I’m Wisdom</h2>
+        <p class="lede">I’m a software engineer and tech creator based in Ireland.</p>
+        <p>Working in software means I like to understand how a product actually works before I talk about it. My job on camera is to make that clear: a real demo, a fair test and plain English instead of a list of specs.</p>
+        <p>I plan, film and edit every video myself, with real products and no made-up claims. When a video shows a test, what you see and hear is the real result.</p>
+        <p>I also run <a href="https://youtube.com/@itsWizdom" target="_blank" rel="noopener">ItsWizdom</a>, my independent YouTube channel for real-world phone and gadget reviews. It’s separate from my paid UGC work.</p>
       </div>
       <div>
-        <p class="eyebrow">What you get</p>
-        <ul class="offer">
-          <li>Hook-first 9:16 ads for TikTok, Reels and Shorts</li>
-          <li>3 hooks delivered per ad</li>
-          <li>Script, filming and edit, all by me</li>
-          <li>Burned-in captions, plus a caption file</li>
-        </ul>
+        <p class="eyebrow">Quick facts</p>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Ireland</dd></div>
+          <div><dt>Videos in</dt><dd>English</dd></div>
+          <div><dt>Kit</dt><dd>iPhone 17 Pro (4K) and a DJI Mic Mini 2 wireless mic</dd></div>
+          <div><dt>Products</dt><dd>Shipped to me in Ireland by the brand</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -286,19 +346,26 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Contact</p>
-        <h2>Let’s make your next ad</h2>
+        <h2>Work with me</h2>
+        <p>Email me about:</p>
       </div>
-      <div class="contact-links">
-        <a class="btn" href="mailto:wisdomeugc@gmail.com?subject=UGC%20enquiry">Email me</a>
-      </div>
+      <ul class="topics">
+        <li>Paid UGC collaborations</li>
+        <li>Product demonstration videos</li>
+        <li>Tech ad creatives</li>
+        <li>Creative concepts and briefs</li>
+      </ul>
+      <p class="secondary intro">A few lines about your product and what you need is plenty. I’ll reply with ideas and a quote.</p>
+      <a class="btn" href="mailto:wisdomeugc@gmail.com?subject=UGC%20enquiry&amp;body=Hi%20Wisdom%2C%0A%0ABrand%20and%20product%3A%0AWhat%20you%20need%3A%0AWhere%20it%20will%20run%3A%0ATimeline%3A%0A">Email me</a>
       <p class="contact-address">wisdomeugc@gmail.com</p>
+      <p class="secondary">Looking for reviews instead? <a href="https://youtube.com/@itsWizdom" target="_blank" rel="noopener">ItsWizdom on YouTube</a> is my independent review channel.</p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Every ad on this page is a self-made spec piece. None was paid for or commissioned by the brands shown. Product names and trademarks belong to their owners.</p>
+    <p>Every video on this page is a self-produced spec ad. None was paid for or commissioned by the brands shown. Product names and trademarks belong to their owners.</p>
     <p>© 2026 Wisdom E</p>
   </div>
 </footer>
@@ -322,7 +389,7 @@
     });
   });
 
-  // Hook switcher: swaps the card's video, poster and quoted opening line.
+  // Hook switcher: swaps the card's video, poster, length and quoted opening line.
   document.querySelectorAll('.switch').forEach(group => {
     const card = group.closest('.piece');
     const fig = card.querySelector('.player');
@@ -337,6 +404,7 @@
         video.poster = btn.dataset.poster;
         video.querySelector('source').src = btn.dataset.src;
         video.load();
+        fig.querySelector('.len').textContent = btn.dataset.len;
         line.textContent = btn.dataset.line;
       });
     });
